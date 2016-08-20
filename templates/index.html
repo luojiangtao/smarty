@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>
+            index
+        </title>
+    </head>
+    <body>
+        <h1>
+            smarty
+        </h1>
+        <h2><?php echo time(); ?></h2>
+        <h1>{$name}</h1>
+        <if condition="$person[0]['name']=='taotao'">
+            <h1>if taotao</h1>
+        <elseif condition="$person[0]['name']=='taotao2'"/>
+            <h1>if taotao2</h1>
+        <else/>
+            <h1>if taotao3 </h1>
+        </if>
+
+        <foreach name='person' item='v' key='k'>
+            <h1>name:{$v['name']} age:{$v['age']}</h1>
+        </foreach> 
+        <include file="templates/footer.html" />
+    </body>
+</html>
